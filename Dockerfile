@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Build the Go app
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -o myapp .
+RUN go build -o myapp .
 
 # Start a new stage from scratch
 FROM alpine:latest
